@@ -16,7 +16,6 @@ def assure_path_exists(path):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
-
 # Create Local Binary Patterns Histograms for face recognization
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 
@@ -56,10 +55,11 @@ while True:
 
         # Recognize the face belongs to which ID
         Id, confidence = recognizer.predict(gray[y:y + h, x:x + w])
-
+        # Input Get Nae Of User
+        name = input("Entre Your Name Please :")
         # Check the ID if exist 
         if (Id == 1):
-            Id = "Youssef {0:.2f}%".format(round(100 - confidence, 2))
+            Id = name+"{0:.2f}%".format(round(100 - confidence, 2))
 
         # Put text describe who is in the picture
         cv2.rectangle(im, (x - 22, y - 90), (x + w + 22, y - 22), (0, 255, 0), -1)
