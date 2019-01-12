@@ -3,8 +3,9 @@
 ## Requirements
 * Python 3.x
 * Installing the following packages using pip:
-	* cv2
-	* numpy
+	 `pip3 install opencv-python`
+	 `pip3 install numpy`
+	 `pip3 install opencv-contrib-python `
   
 ## The first step
  * Open a file "face_datasets.py" that has been waiting for a minute that has been closed by pressing 'q'
